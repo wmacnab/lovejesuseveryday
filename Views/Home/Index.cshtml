@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model DateContentViewModel
+
+
+<div class="wrapper">
+
+    <!-- Left space outside container -->
+    <div class="col-md-4"></div>
+
+
+    <div class="col-md-4 container">
+
+
+        <!-- Heading section -->
+        <div class="row d-flex justify-content-center pt-4">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center">
+                <p class="display-6">@Model.FormattedDate</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <!-- Load chapters -->
+
+        @for (int i = 0; i < Model.TitleContents.Count; i++)
+        {
+            <hr class="separator">
+
+            <div class="row">
+                <p class="display-6 text-center">@Model.TitleContents[i]</p>
+                <p>@Html.Raw(Model.ChapterContents[i])</p>
+            </div>
+
+        }
+
+
+
+
+
+    </div>
+
+
+
+    <!-- Right space outside container -->
+    <div class="col-md-4"></div>
+</div>
