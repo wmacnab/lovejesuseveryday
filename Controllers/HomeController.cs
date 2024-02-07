@@ -108,7 +108,8 @@ namespace lovejesuseveryday.Controllers
 
             // Load XML file
             string translation = "kjv";
-            string fileName = $"C:\\Users\\willi\\source\\repos\\lovejesuseveryday\\wwwroot\\eng-{translation}_xml.xml";
+            //string fileName = $"C:\\Users\\willi\\source\\repos\\lovejesuseveryday\\wwwroot\\eng-{translation}_xml.xml";
+            string fileName = $"wwwroot/eng-{translation}_xml.xml";
             using (XmlReader reader = XmlReader.Create(fileName))
             {
                 reader.ReadToFollowing("XMLBIBLE");
